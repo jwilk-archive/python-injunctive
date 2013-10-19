@@ -23,6 +23,8 @@
 import abc
 import operator
 
+__all__ = []
+
 class junction(object):
 
     __metaclass__ = abc.ABCMeta
@@ -60,6 +62,8 @@ class all(junction):
                 return False
         return True
 
+__all__ += ['all']
+
 class any(junction):
 
     def _cmp(self, other, op):
@@ -67,6 +71,8 @@ class any(junction):
             if op(x, other):
                 return True
         return False
+
+__all__ += ['any']
 
 class exactly(junction):
 
@@ -83,14 +89,20 @@ class exactly(junction):
                 return False
         return n == self._n
 
+__all__ += ['exactly']
+
 class none(exactly):
 
     def __init__(self, iterable):
         exactly.__init__(self, 0, iterable)
 
+__all__ += ['none']
+
 class one(exactly):
 
     def __init__(self, iterable):
         exactly.__init__(self, 1, iterable)
+
+__all__ += ['one']
 
 # vim:ts=4 sw=4 et
