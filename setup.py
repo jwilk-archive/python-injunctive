@@ -14,7 +14,6 @@ Programming Language :: Python :: 2
 Programming Language :: Python :: 3
 '''.strip().splitlines()
 
-import os
 import distutils.core
 
 distutils.core.setup(
