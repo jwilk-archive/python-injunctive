@@ -22,8 +22,12 @@
 
 import abc
 import operator
+import sys
 
 __all__ = []
+
+def _bool_op(self, other):
+    return bool(self)
 
 class junction(object):
 
@@ -53,6 +57,13 @@ class junction(object):
 
     def __ne__(self, other):
         return self._cmp(other, op=operator.ne)
+
+    def __nonzero__(self):
+        return self._cmp(None, op=_bool_op)
+
+    if sys.version_info >= (3,):
+        __bool__ = __nonzero__
+        del __nonzero__
 
 class all(junction):
 
