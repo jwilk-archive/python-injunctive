@@ -68,14 +68,6 @@ class any(junction):
                 return True
         return False
 
-class none(junction):
-
-    def _cmp(self, other, op):
-        for x in self._iterable:
-            if op(x, other):
-                return False
-        return True
-
 class exactly(junction):
 
     def __init__(self, n, iterable):
@@ -90,6 +82,11 @@ class exactly(junction):
             if n > self._n:
                 return False
         return n == self._n
+
+class none(exactly):
+
+    def __init__(self, iterable):
+        exactly.__init__(self, 0, iterable)
 
 class one(exactly):
 
