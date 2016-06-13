@@ -1,7 +1,7 @@
 '''
 *injunctive* provides Perl6 style junctions_ (``all``, ``any``, ``one``, ``none``).
 
-.. _junctions: http://www.perl6.org/archive/doc/design/exe/E06.html#The%20Wonderful%20World%20of%20Junctions
+.. _junctions: https://www.perl6.org/archive/doc/design/exe/E06.html#The%20Wonderful%20World%20of%20Junctions
 '''
 
 classifiers = '''
