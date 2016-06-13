@@ -24,7 +24,7 @@ distutils.core.setup(
     description='Perl6 style junctions',
     long_description=__doc__.strip(),
     classifiers=classifiers,
-    url='http://jwilk.net/software/python-injunctive',
+    url='https://github.com/jwilk/python-injunctive',
     author='Jakub Wilk',
     author_email='jwilk@jwilk.net',
     py_modules=['injunctive']
