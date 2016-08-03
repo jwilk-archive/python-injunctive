@@ -20,7 +20,6 @@ distutils.core.setup(
     name='injunctive',
     version='0.1',
     license='MIT',
-    platforms=['any'],
     description='Perl6 style junctions',
     long_description=__doc__.strip(),
     classifiers=classifiers,
