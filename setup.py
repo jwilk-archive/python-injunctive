@@ -4,6 +4,8 @@
 .. _junctions: https://www.perl6.org/archive/doc/design/exe/E06.html#The%20Wonderful%20World%20of%20Junctions
 '''
 
+import distutils.core
+
 classifiers = '''
 Development Status :: 3 - Alpha
 Intended Audience :: Developers
@@ -13,8 +15,6 @@ Programming Language :: Python
 Programming Language :: Python :: 2
 Programming Language :: Python :: 3
 '''.strip().splitlines()
-
-import distutils.core
 
 distutils.core.setup(
     name='injunctive',
