@@ -28,6 +28,13 @@
 
 import distutils.core
 
+try:
+    import distutils644
+except ImportError:
+    pass
+else:
+    distutils644.install()
+
 classifiers = '''
 Development Status :: 3 - Alpha
 Intended Audience :: Developers
